@@ -95,7 +95,7 @@ Group:          doc
 Secure Socket Layer.
 
 %prep
-%setup -q -n openssl1.1.1q
+%setup -q -n openssl-1.1.1q
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
@@ -176,7 +176,6 @@ rm -rf %{buildroot}*/usr/share/doc/openssl/html
 
 %files
 %exclude /usr/bin/openssl
-/usr/share/clear/optimized-elf/bin*
 /usr/share/defaults/ssl/openssl.cnf
 
 %files lib
