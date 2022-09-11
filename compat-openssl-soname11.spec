@@ -95,7 +95,7 @@ Group:          doc
 Secure Socket Layer.
 
 %prep
-%setup -q
+%setup -q -n openssl1.1.1q
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
