@@ -1,6 +1,6 @@
 Name:           compat-openssl-soname11
 Version:        1.1.1q
-Release:        107
+Release:        108
 License:        OpenSSL
 Summary:        Secure Socket Layer
 Url:            http://www.openssl.org/
