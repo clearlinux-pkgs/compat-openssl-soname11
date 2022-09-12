@@ -157,7 +157,7 @@ export LDFLAGS="$LDFLAGS_ORIG -m64 -flto"
 export CXXFLAGS="$CXXFLAGS_ORIG -m64 -flto"
 make  DESTDIR=%{buildroot} MANDIR=/usr/share/man MANSUFFIX=openssl install
 
-install -D -m0644 apps/openssl.cnf %{buildroot}/usr/share/defaults/ssl/openssl.cnf
+install -D -m0644 apps/openssl.cnf %{buildroot}/usr/share/defaults/ssl11/openssl.cnf
 rm -rf %{buildroot}*/etc/ssl
 rm -rf %{buildroot}*/usr/lib64/*.a
 rm -rf %{buildroot}*/usr/share/doc/openssl/html
@@ -167,7 +167,7 @@ rm -rf %{buildroot}*/usr/share/doc/openssl/html
 
 %files
 %exclude /usr/bin/openssl
-/usr/share/defaults/ssl/openssl.cnf
+/usr/share/defaults/ssl11/openssl.cnf
 
 %files lib
 /usr/lib64/libcrypto.so.1.1
@@ -198,16 +198,16 @@ rm -rf %{buildroot}*/usr/share/doc/openssl/html
 %defattr(-,root,root,-)
 
 %files dev32
-/usr/lib32/libcrypto.so
-/usr/lib32/libssl.so
-/usr/lib32/pkgconfig/32libcrypto.pc
-/usr/lib32/pkgconfig/32libssl.pc
-/usr/lib32/pkgconfig/32openssl.pc
-/usr/lib32/pkgconfig/libcrypto.pc
-/usr/lib32/pkgconfig/libssl.pc
-/usr/lib32/pkgconfig/openssl.pc
-/usr/lib32/libcrypto.a
-/usr/lib32/libssl.a
+%exclude /usr/lib32/libcrypto.so
+%exclude /usr/lib32/libssl.so
+%exclude /usr/lib32/pkgconfig/32libcrypto.pc
+%exclude /usr/lib32/pkgconfig/32libssl.pc
+%exclude /usr/lib32/pkgconfig/32openssl.pc
+%exclude /usr/lib32/pkgconfig/libcrypto.pc
+%exclude /usr/lib32/pkgconfig/libssl.pc
+%exclude /usr/lib32/pkgconfig/openssl.pc
+%exclude /usr/lib32/libcrypto.a
+%exclude /usr/lib32/libssl.a
 
 %files doc
 %exclude /usr/share/man/man1/*
