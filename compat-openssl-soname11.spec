@@ -6,8 +6,6 @@ Summary:        Secure Socket Layer
 Url:            http://www.openssl.org/
 Group:          libs/network
 Source0:        https://www.openssl.org/source/openssl-1.1.1q.tar.gz
-Requires:       openssl-doc = %{version}-%{release}
-Requires:       openssl-filemap = %{version}-%{release}
 BuildRequires:  zlib-dev
 BuildRequires:  zlib-dev32
 BuildRequires:  util-linux-extras
@@ -34,7 +32,6 @@ Secure Socket Layer.
 License:        OpenSSL
 Summary:        Secure Socket Layer
 Group:          libs/network
-Requires:       openssl-filemap = %{version}-%{release}
 Requires:       p11-kit
 
 %description lib
@@ -44,8 +41,6 @@ Secure Socket Layer.
 License:        OpenSSL
 Summary:        Secure Socket Layer
 Group:          devel
-Requires:       openssl = %{version}-%{release}
-Requires:       openssl-lib = %{version}-%{release}
 
 %description dev
 Secure Socket Layer.
@@ -54,8 +49,6 @@ Secure Socket Layer.
 License:        OpenSSL
 Summary:        Secure Socket Layer
 Group:          devel
-Requires:       openssl = %{version}-%{release}
-Requires:       openssl-lib = %{version}-%{release}
 Requires:	c_rehash
 
 %description extras
@@ -80,8 +73,6 @@ Secure Socket Layer.
 License:        OpenSSL
 Summary:        Secure Socket Layer
 Group:          devel
-Requires:       openssl = %{version}-%{release}
-Requires:       openssl-lib32 = %{version}-%{release}
 
 %description dev32
 Secure Socket Layer.
